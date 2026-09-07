@@ -33,6 +33,10 @@ This is the missing layer. Star schema, tested SQL models, an FP&A-grade varianc
     (volume -6.8L, mix -8.6L, price +1.3L)
 ```
 
+![Budget to actual waterfall](outputs/variance_waterfall.png)
+
+*The bridge from plan to actual, split into the three effects that lead to three different decisions.*
+
 Headline: revenue landed 1.5% under plan. Useless on its own.
 
 The decomposition is the finding. **Silk sarees missed by more on mix than on volume** — footfall held up, but customers traded down out of the highest-ticket category into fancy sarees, which beat its own plan by ₹6.3L on mix. The business did not lose customers. It lost basket value, in one specific category, and it partly masked that by discounting less than planned.
@@ -59,6 +63,10 @@ Dormant low value - do not spend              14.6% of customers    9.4% of reve
 High value, overdue - call them                4.6% of customers    6.4% of revenue
 ```
 
+![Revenue share versus customer share](outputs/segments.png)
+
+*Where the customer count and the revenue diverge is where the money is.*
+
 The last row is the one worth money: **119 customers, 4.6% of the base, ₹1.01 lakh of lifetime value each, and overdue against their own buying rhythm.** That is a callable list, not a segment.
 
 Standard RFM would have filed most of them as lapsed. That is wrong for seasonal retail — a customer who buys once a year at Deepavali is not lapsed in March, they are on schedule. So recency is scored against each customer's own observed inter-purchase interval, not a fixed window.
@@ -72,6 +80,10 @@ backtest: model MAPE 5.62% vs seasonal naive 7.34% -> model beats seasonal naive
   Jul 2026    0.50 cr  [0.46 - 0.54]
   Sep 2026    0.85 cr  [0.81 - 0.89]
 ```
+
+![Forecast with 80% interval](outputs/forecast.png)
+
+*Two seasonal cycles of history, six months forward, with the interval shown rather than hidden.*
 
 Multiplicative seasonal decomposition plus a linear trend on the deseasonalised series. Not a neural network, and deliberately so: with 24 monthly observations from a business whose seasonality is *already known* — Pongal up, Aadi down, Deepavali carrying the year — a heavy model has nothing to learn that the calendar does not say, and it cannot be explained to the person who has to act on it.
 
