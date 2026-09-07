@@ -1,0 +1,38 @@
+{
+  "fiscal_year": "FY2025-26",
+  "reconciliation_error_inr": 0.02,
+  "bridge": [
+    {
+      "step": "Budget revenue",
+      "value": 100572731.51,
+      "kind": "total"
+    },
+    {
+      "step": "Price / discount effect",
+      "value": 387432.13,
+      "kind": "delta"
+    },
+    {
+      "step": "Volume effect",
+      "value": -1560921.14,
+      "kind": "delta"
+    },
+    {
+      "step": "Mix effect",
+      "value": -326196.27,
+      "kind": "delta"
+    },
+    {
+      "step": "Actual revenue",
+      "value": 99073046.23,
+      "kind": "total"
+    }
+  ],
+  "backtest": {
+    "holdout_months": 6,
+    "model_mape_pct": 5.62,
+    "seasonal_naive_mape_pct": 7.34,
+    "improvement_pct_points": 1.72,
+    "verdict": "model beats seasonal naive"
+  }
+}

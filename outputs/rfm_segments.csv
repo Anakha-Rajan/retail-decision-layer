@@ -1,0 +1,8 @@
+segment,customers,revenue,avg_order_value,avg_orders,median_days_since,pct_of_customers,pct_of_revenue,revenue_per_customer
+Steady middle - hold,741,44044233.8,2887.75,21.01,19.0,28.5,23.3,59439.0
+"Big spender, low frequency - upsell events",429,41971775.16,4492.99,22.26,24.0,16.5,22.2,97836.0
+Champions - protect,298,30106687.6,3794.08,26.79,7.0,11.5,15.9,101029.0
+Loyal but slipping - reactivate,274,22327629.4,3255.69,25.07,44.0,10.5,11.8,81488.0
+New - convert to second purchase,359,20664127.37,3300.51,17.4,7.0,13.8,10.9,57560.0
+Dormant low value - do not spend,379,17706163.04,2713.48,17.46,61.0,14.6,9.4,46718.0
+"High value, overdue - call them",119,12061485.21,4272.96,24.1,80.0,4.6,6.4,101357.0

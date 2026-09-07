@@ -1,0 +1,7 @@
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+pytest>=7.4
+
+# optional: the Spark branch in spark/build_warehouse_spark.py
+# pyspark>=3.5
